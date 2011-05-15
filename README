@@ -1,0 +1,13 @@
+This is the Sirius Flying, LLC web site source code. It is based on
+Google App Engine (Python) and Yahoo YUI user interface library.
+
+The Google App Engine project name is 'siriusflying' and is
+contained in the siriusflying subdirectory. However, To run the APP
+under under the python framework, you must first type:
+
+> make
+
+in the top level directory to unpack the Yahoo YUI library code into
+the App Engine project directory. Then the entire project can be
+uploaded to Google via the GoogleAppEngineLauncher.
+

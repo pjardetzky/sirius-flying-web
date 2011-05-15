@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block title %}Sirius Flying, LLC{% endblock %}
+{% block css %}
+<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="/build/menu/assets/skins/sam/menu.css">
+<link rel="stylesheet" type="text/css" href="/build/button/assets/skins/sam/button.css" />
+<link rel="stylesheet" type="text/css" href="/css/skin.css" />
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+<script type="text/javascript" src="/build/container/container_core-min.js"></script>
+<script type="text/javascript" src="/build/element/element-min.js"></script>
+<script type="text/javascript" src="/build/menu/menu-min.js"></script>
+<script type="text/javascript" src="/build/button/button-min.js"></script>
+<script type="text/javascript">
+  YAHOO.util.Event.onContentReady("menu", function () {
+
+  var menuBar = new YAHOO.widget.MenuBar("menu", { 
+                                         autosubmenudisplay: true, 
+                                         hidedelay: 750, 
+                                         lazyload: true });
+    menuBar.render()
+
+   });
+</script>
+
+{% endblock %}
+{% block header %}
+<table id="htable">
+<tr>
+  <td width="5%"></td>
+  <td width="90%">
+   <div class="title">
+       SIRIUS FLYING, <span style="font-size:60%">LLC</span>
+    </div>
+  </td>
+</tr>
+</table>
+<table id="mtable">
+<tr>
+  <td width="15%"></td>
+  <td width="85%">
+     <div id="menu" class="yuimenubar yuimenubarnav">
+     <div class="bd">
+       <ul class="first-of-type">
+            <li class="yuimenubaritem first-of-type">
+               <a class="yuimenubaritemlabel" href="/">Home</a>
+            </li>
+            <li class="yuimenubaritem">
+                <a class="yuimenubaritemlabel" href="/discovery">Discovery Flight</a>
+            </li>
+            <li class="yuimenubaritem">
+                <a class="yuimenubaritemlabel" href="/training">Flight Training</a>
+            </li>
+            <li class="yuimenubaritem">
+                <a class="yuimenubaritemlabel" href="/rental">Helicopter Rental</a>
+            </li>
+            <li class="yuimenubaritem">
+                <a class="yuimenubaritemlabel" href="/about">About Us</a>
+            </li>
+            <li class="yuimenubaritem">
+                <a class="yuimenubaritemlabel" href="/contact">Contact Us</a>
+            </li>
+            <li class="yuimenubaritem">
+                <a class="yuimenubaritemlabel" href="http://www.schedulepointe.com" target="_">Online Scheduling</a>
+            </li>
+       </ul>
+     </div>
+     </div>
+  </td>
+</tr>
+</table>
+<br>
+{% endblock %}
+
+{% block footer %}
+<div id="ft" align="center">
+<br>
+   <table border="0" cellpadding="0" cellspacing="0" width="100%">
+   <tr>
+    <td width="80%">
+        <small>
+        {{long_name}} &copy; 2011. All rights reserved.&nbsp;
+        <a class="sirius-links" href="/">Home</a>&nbsp;&nbsp;
+        <a class="sirius-links" href="/discovery">Discovery Flight</a>&nbsp;&nbsp;
+        <a class="sirius-links" href="/training">Flight Training</a>&nbsp;&nbsp;
+        <a class="sirius-links" href="/rental">Helicopter Rental</a>&nbsp;&nbsp;
+        <a class="sirius-links" href="/about">About Us</a>&nbsp;&nbsp;
+        <a class="sirius-links" href="/contact">Contact Us</a>&nbsp;&nbsp;
+        <a class="sirius-links" href="http://www.schedulepointe.com" target="_">Online Scheduling</a>
+        </small>
+    </td>
+    <td width="20%" align="right">
+    </td>
+   </tr>
+   </table>
+</div>
+{% endblock %}
+
