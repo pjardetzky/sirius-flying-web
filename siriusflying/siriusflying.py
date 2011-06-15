@@ -1,5 +1,5 @@
 #
-# $Id: siriusflying.py,v 5522914bff63 2011/05/15 02:22:12 pjardetzky $ 
+# $Id: siriusflying.py,v a9bff61f36d3 2011/06/15 03:19:28 pjardetzky $ 
 #
 # @author         $Author$
 # @version        $Rev$
@@ -48,6 +48,10 @@ class rental(webapp.RequestHandler):
         path = os.path.join(os.path.dirname(__file__), 'templates/rental.html')
         self.response.out.write(template.render(path, template_values))
 
+class robots(webapp.RequestHandler):
+    def get(self):
+        path = os.path.join(os.path.dirname(__file__), 'robots.txt')
+        self.response.out.write(template.render(path, template_values))
 
 application = webapp.WSGIApplication(
                                      [('/', index), 
@@ -56,6 +60,7 @@ application = webapp.WSGIApplication(
                                       ('/training', training),
                                       ('/discovery', discovery),
                                       ('/rental', rental),
+                                      ('/robots.txt', robots),
                                       ],
                                      debug=True)
 
