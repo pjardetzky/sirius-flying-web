@@ -1,9 +1,5 @@
 #
-# $Id: siriusflying.py,v a9bff61f36d3 2011/06/15 03:19:28 pjardetzky $ 
-#
-# @author         $Author$
-# @version        $Rev$
-# @lastrevision   $Date$
+# $Id: siriusflying.py,v 9959f289aa30 2011/09/25 05:16:53 pjardetzky $ 
 #
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp.util import run_wsgi_app

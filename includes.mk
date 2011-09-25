@@ -1,9 +1,5 @@
 #
-# $Id: includes.mk,v 5522914bff63 2011/05/15 02:22:12 pjardetzky $ 
-#
-# @author         $Author$
-# @version        $Rev$
-# @lastrevision   $Date$
+# $Id: includes.mk,v 9959f289aa30 2011/09/25 05:16:53 pjardetzky $ 
 #
 APP_NAME        = siriusflying
 
