@@ -1,8 +1,7 @@
 #
-# $Id: siriusflying.py,v 9959f289aa30 2011/09/25 05:16:53 pjardetzky $ 
+# $Id:$ 
 #
-from google.appengine.ext import webapp
-from google.appengine.ext.webapp.util import run_wsgi_app
+import webapp2
 from google.appengine.ext.webapp import template
 import os
 
@@ -12,57 +11,50 @@ template_values = {
     }
 
 
-class index(webapp.RequestHandler):
+class index(webapp2.RequestHandler):
     def get(self):
         path = os.path.join(os.path.dirname(__file__), 'templates/index.html')
         self.response.out.write(template.render(path, template_values))
 
 
-class about(webapp.RequestHandler):
+class about(webapp2.RequestHandler):
     def get(self):
         path = os.path.join(os.path.dirname(__file__), 'templates/about.html')
         self.response.out.write(template.render(path, template_values))
 
-class contact(webapp.RequestHandler):
+class contact(webapp2.RequestHandler):
     def get(self):
         path = os.path.join(os.path.dirname(__file__), 'templates/contact.html')
         self.response.out.write(template.render(path, template_values))
 
-class training(webapp.RequestHandler):
+class training(webapp2.RequestHandler):
     def get(self):
         path = os.path.join(os.path.dirname(__file__), 'templates/training.html')
         self.response.out.write(template.render(path, template_values))
 
 
-class discovery(webapp.RequestHandler):
+class discovery(webapp2.RequestHandler):
     def get(self):
         path = os.path.join(os.path.dirname(__file__), 'templates/discovery.html')
         self.response.out.write(template.render(path, template_values))
 
-class rental(webapp.RequestHandler):
+class rental(webapp2.RequestHandler):
     def get(self):
         path = os.path.join(os.path.dirname(__file__), 'templates/rental.html')
         self.response.out.write(template.render(path, template_values))
 
-class robots(webapp.RequestHandler):
+class robots(webapp2.RequestHandler):
     def get(self):
         path = os.path.join(os.path.dirname(__file__), 'robots.txt')
         self.response.out.write(template.render(path, template_values))
 
-application = webapp.WSGIApplication(
-                                     [('/', index), 
-                                      ('/about', about),
-                                      ('/contact', contact),
-                                      ('/training', training),
-                                      ('/discovery', discovery),
-                                      ('/rental', rental),
-                                      ('/robots.txt', robots),
-                                      ],
-                                     debug=True)
-
-def main():
-    run_wsgi_app(application)
-
-################################################################################
-if __name__ == "__main__":
-    main()
+app = webapp2.WSGIApplication(
+                             [('/', index), 
+                             ('/about', about),
+                             ('/contact', contact),
+                             ('/training', training),
+                             ('/discovery', discovery),
+                             ('/rental', rental),
+                             ('/robots.txt', robots),
+                             ],
+                             debug=True)
