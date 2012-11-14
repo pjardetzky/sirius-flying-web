@@ -2,9 +2,15 @@
 
 {% block content %}
 <div class="yui3-g">
-   <div class="yui3-u-1-5">{% block colone %}{% endblock %}</div>
-   <div class="yui3-u-3-5">{% block coltwo %}{% endblock %}</div>
-   <div class="yui3-u-1-5">
+   <div class="yui3-u" id="left">
+      {% block colone %}{% endblock %}
+   </div>
+   <div class="yui3-u" id="center">
+      <div id="center-block">
+         {% block coltwo %}{% endblock %}
+      </div>
+   </div>
+   <div class="yui3-u" id="right">
       {% block colthree %}{% endblock %}
        <div id="cbox" align="right">
 	  CALL (650) 320-8447<br>

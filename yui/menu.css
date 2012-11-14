@@ -14,7 +14,7 @@
     *line-height: 1.45; /* For IE */
     border: none;
     background: #fff;
-    padding: 3px 0;
+    padding: 3px 0; 
 }
 
 .yui3-skin-sam .yui3-menu .yui3-menu .yui3-menu-content {
@@ -24,18 +24,18 @@
 
 /* Horizontal menus */
 .yui3-skin-sam .yui3-menu-horizontal .yui3-menu-content {
-    line-height: 2;  /* ~24px */
-    *line-height: 1.9; /* For IE */
+    line-height: 1.0;  /* ~24px */
+    *line-height: 0.9; /* For IE */
     background: -moz-linear-gradient(top, #E0CF99, #CAB586);
     background: -webkit-gradient(linear, left top, left bottom, from(#E0CF99), to(#CAB586));
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#E0CF99, endColorstr=#CAB586);
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#E0CF99, endColorstr=#CAB586)";
-/*    border: 1px solid #553; */
+    padding: 0;
 }
 
 .yui3-skin-sam .yui3-menu ul,
 .yui3-skin-sam .yui3-menu ul ul {
-    margin-top: 3px;
+    margin-top: 3px; 
     padding-top: 3px;
     border-top: none;
 }
@@ -62,13 +62,11 @@
       "block" by node-menunav-core.css file.
       */
     _border-bottom: solid 1px #fff;
-
 }
 
 .yui3-skin-sam .yui3-menu-horizontal li {
 
     _border-bottom: 0;
-
 }
 
 .yui3-skin-sam .yui3-menubuttonnav li {
@@ -98,7 +96,7 @@
 .yui3-skin-sam .yui3-menuitem-content,
 .yui3-skin-sam .yui3-menu .yui3-menu .yui3-menuitem-content {
     /*padding: 0 20px;*/
-    padding: 0 1em;
+    padding: 0 1em; 
     color: #553;
     text-decoration: none;
     cursor: default;
@@ -113,11 +111,9 @@
 
 .yui3-skin-sam .yui3-menu-horizontal .yui3-menu-label,
 .yui3-skin-sam .yui3-menu-horizontal .yui3-menuitem-content {
-    padding: 5px 15px;
-    border-style: solid;
-    border-color: black;
-    border-width: 0;
-    margin: -1px 0;
+    padding: 6px 15px;
+    border: 1px solid #A0926B;
+    margin: -1px 0; 
     float: left; 	/*	Ensures that menu labels clear floated descendents. 
     				Also gets negative margins working in IE 7 
 				(Strict Mode). */
@@ -201,6 +197,7 @@
       */
     border-left-width: 0;
     margin-left: 0;
+    outline-width: 0;
 }
 
 /*
@@ -211,6 +208,7 @@
 .yui3-skin-sam .yui3-menu-horizontal .yui3-menu-label-menuvisible {
     background: #E3D6B7;
     color:#553;
+    border: 1px solid #A0926B;
 }
 
 .yui3-skin-sam .yui3-menubuttonnav .yui3-menu-label-active,
