@@ -1,0 +1,234 @@
+/*
+  YUI 3.7.2 (build 5639)
+  YUI 3.7.3 (build 5687)
+  Copyright 2012 Yahoo! Inc. All rights reserved.
+  Licensed under the BSD License.
+  http://yuilibrary.com/license/
+  */
+
+/* Vertical menus and submenus */
+.yui3-skin-sam .yui3-menu-content, 
+.yui3-skin-sam .yui3-menu .yui3-menu .yui3-menu-content {
+    font-size: 93%;  /* 12px */
+    line-height: 1.5;  /* 18px */
+    *line-height: 1.45; /* For IE */
+    border: none;
+    background: #fff;
+    padding: 3px 0;
+}
+
+.yui3-skin-sam .yui3-menu .yui3-menu .yui3-menu-content {
+    font-size: 100%;
+}
+
+
+/* Horizontal menus */
+.yui3-skin-sam .yui3-menu-horizontal .yui3-menu-content {
+    line-height: 2;  /* ~24px */
+    *line-height: 1.9; /* For IE */
+    background: -moz-linear-gradient(top, #E0CF99, #CAB586);
+    background: -webkit-gradient(linear, left top, left bottom, from(#E0CF99), to(#CAB586));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#E0CF99, endColorstr=#CAB586);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#E0CF99, endColorstr=#CAB586)";
+/*    border: 1px solid #553; */
+}
+
+.yui3-skin-sam .yui3-menu ul,
+.yui3-skin-sam .yui3-menu ul ul {
+    margin-top: 3px;
+    padding-top: 3px;
+    border-top: none;
+}
+
+.yui3-skin-sam .yui3-menu ul.first-of-type {
+    border: 0;
+    margin: 0;
+    padding: 0;    
+}
+
+.yui3-skin-sam .yui3-menu-horizontal ul {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+
+.yui3-skin-sam .yui3-menu li,
+.yui3-skin-sam .yui3-menu .yui3-menu li {
+    /*
+      For and IE 6 (Strict Mode and Quirks Mode) and IE 7 (Quirks Mode only): 
+      Used to collapse superfluous white space between <li> elements that is 
+      triggered by the "display" property of the <a> elements being set to 
+      "block" by node-menunav-core.css file.
+      */
+    _border-bottom: solid 1px #fff;
+
+}
+
+.yui3-skin-sam .yui3-menu-horizontal li {
+
+    _border-bottom: 0;
+
+}
+
+.yui3-skin-sam .yui3-menubuttonnav li {
+
+    border-right: none;
+
+}
+
+.yui3-skin-sam .yui3-splitbuttonnav li {
+
+    border-right: none;
+
+}
+
+.yui3-skin-sam .yui3-menubuttonnav li li,
+.yui3-skin-sam .yui3-splitbuttonnav li li {
+
+    border-right: 0;
+
+}
+
+
+/* Menuitems and menu labels */
+
+.yui3-skin-sam .yui3-menu-label,
+.yui3-skin-sam .yui3-menu .yui3-menu .yui3-menu-label,
+.yui3-skin-sam .yui3-menuitem-content,
+.yui3-skin-sam .yui3-menu .yui3-menu .yui3-menuitem-content {
+    /*padding: 0 20px;*/
+    padding: 0 1em;
+    color: #553;
+    text-decoration: none;
+    cursor: default;
+    /*
+      Necessary specify values for border, position and margin to override 
+      values specified in the selectors that follow. 
+      */
+    float: none;
+    border: 0;
+    margin: 0;
+}
+
+.yui3-skin-sam .yui3-menu-horizontal .yui3-menu-label,
+.yui3-skin-sam .yui3-menu-horizontal .yui3-menuitem-content {
+    padding: 5px 15px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0;
+    margin: -1px 0;
+    float: left; 	/*	Ensures that menu labels clear floated descendents. 
+    				Also gets negative margins working in IE 7 
+				(Strict Mode). */
+    width: auto;
+}
+
+.yui3-skin-sam .yui3-menu-label,
+.yui3-skin-sam .yui3-menu .yui3-menu .yui3-menu-label {
+    background: -moz-linear-gradient(top, #E0CF99, #CAB586);
+    background: -webkit-gradient(linear, left top, left bottom, from(#E0CF99), to(#CAB586));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#E0CF99, endColorstr=#CAB586);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#E0CF99, endColorstr=#CAB586)";
+}
+
+.yui3-skin-sam .yui3-menu-horizontal .yui3-menu-label {
+    background: -moz-linear-gradient(top, #E0CF99, #CAB586);
+    background: -webkit-gradient(linear, left top, left bottom, from(#E0CF99), to(#CAB586));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#E0CF99, endColorstr=#CAB586);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#E0CF99, endColorstr=#CAB586)";
+}
+
+.yui3-skin-sam .yui3-menubuttonnav .yui3-menu-label,
+.yui3-skin-sam .yui3-splitbuttonnav .yui3-menu-label {
+    background-image: none;
+}
+
+.yui3-skin-sam .yui3-menubuttonnav .yui3-menu-label {
+    padding-right: 0;
+}
+
+.yui3-skin-sam .yui3-menubuttonnav .yui3-menu-label em {
+    font-style: normal;
+    padding-right: 20px;
+    display: block;
+    background: -moz-linear-gradient(top, #E0CF99, #CAB586);
+    background: -webkit-gradient(linear, left top, left bottom, from(#E0CF99), to(#CAB586));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#E0CF99, endColorstr=#CAB586);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#E0CF99, endColorstr=#CAB586)";
+}
+
+
+.yui3-skin-sam .yui3-splitbuttonnav .yui3-menu-label {
+    padding: 0;
+}
+
+.yui3-skin-sam .yui3-splitbuttonnav .yui3-menu-label a {
+    float: left;
+    width: auto;
+    color: #000;
+    text-decoration: none;
+    cursor: default;
+    padding: 0 5px 0 10px;
+}
+
+.yui3-skin-sam .yui3-splitbuttonnav .yui3-menu-label .yui3-menu-toggle {
+    padding: 0;	/* Overide padding applied by the preceeding rule. */
+    border-left: none;
+    width: 15px;
+    overflow: hidden;
+    text-indent: -1000px;
+    background: white;
+}
+
+
+/* Selected menuitem */
+
+.yui3-skin-sam .yui3-menu-label-active,
+.yui3-skin-sam .yui3-menu-label-menuvisible,
+.yui3-skin-sam .yui3-menu .yui3-menu .yui3-menu-label-active,
+.yui3-skin-sam .yui3-menu .yui3-menu .yui3-menu-label-menuvisible {
+    background-color: #E3D6B7;
+}
+
+.yui3-skin-sam .yui3-menuitem-active .yui3-menuitem-content,
+.yui3-skin-sam .yui3-menu .yui3-menu .yui3-menuitem-active .yui3-menuitem-content {
+    background-image: none;
+    background-color: black;
+    /*
+      Undo values set for "border-left-width" and "margin-left" when the root 
+      menu has a class of "yui-menubuttonnav" or "yui-splitbuttonnav" applied.
+      */
+    border-left-width: 0;
+    margin-left: 0;
+}
+
+/*
+ * The hover highlight color
+ */
+.yui3-skin-sam .yui3-menu-horizontal .yui3-menu-label-active,
+.yui3-skin-sam .yui3-menu-horizontal .yui3-menuitem-active .yui3-menuitem-content,
+.yui3-skin-sam .yui3-menu-horizontal .yui3-menu-label-menuvisible {
+    background: #E3D6B7;
+    color:#553;
+}
+
+.yui3-skin-sam .yui3-menubuttonnav .yui3-menu-label-active,
+.yui3-skin-sam .yui3-menubuttonnav .yui3-menuitem-active .yui3-menuitem-content,
+.yui3-skin-sam .yui3-menubuttonnav .yui3-menu-label-menuvisible,
+.yui3-skin-sam .yui3-splitbuttonnav .yui3-menu-label-active,
+.yui3-skin-sam .yui3-splitbuttonnav .yui3-menuitem-active .yui3-menuitem-content,
+.yui3-skin-sam .yui3-splitbuttonnav .yui3-menu-label-menuvisible {
+    border-left-width: 0px;
+    margin-left: -1px;
+}
+
+.yui3-skin-sam .yui3-splitbuttonnav .yui3-menu-label-menuvisible {
+    border-color: black;
+    background: transparent;
+}
+
+.yui3-skin-sam .yui3-splitbuttonnav .yui3-menu-label-menuvisible .yui3-menu-toggle {
+    border-color: black;
+    background: white;
+}

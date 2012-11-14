@@ -1,3 +1,16 @@
+body {
+    font-family:"Trebuchet MS",Arial,Sans-Serif;
+    font-size:90%;
+    text-align:center;
+    background:white;
+    color:#553;
+}
+#doc {
+    width: 1050px;
+    margin: 0 auto;
+    text-align: left;
+    background:white;
+}
 #htable {
     background: -moz-linear-gradient(top, #990000, #6E0000);
     background: -webkit-gradient(linear, left top, left bottom, from(#990000), to(#6E0000));
@@ -8,6 +21,7 @@
     height: 87px;
     padding:0;
     text-align:left;
+    border: none;
 }
 div.title {
     font-family:Times,Serif;
@@ -16,24 +30,6 @@ div.title {
     color:#fff;
     text-decoration:none;	
     text-align:left;
-}
-#mtable {
-    /* background:#D5C08B; */
-    background: -moz-linear-gradient(top, #E0CF99, #CAB586);
-    background: -webkit-gradient(linear, left top, left bottom, from(#E0CF99), to(#CAB586));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#E0CF99, endColorstr=#CAB586);
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#E0CF99, endColorstr=#CAB586)";
-    color:#553;
-    border: solid 1px #A0926B; 
-    cellpadding:0;
-    cellspacing:0;
-    width:100%;
-}
-body {
-    font-family:"Trebuchet MS",Arial,Sans-Serif;
-    font-size:90%;
-    background:white;
-    color:#553;
 }
 a.sirius-links {
        color: black;
@@ -86,4 +82,22 @@ pre{
    font-size:1.2em;
    padding:1em;
 }
-
+table {
+   margin: 0;
+}
+td,th {
+   border: none;
+   padding: none;
+}
+#right-block {
+   margin-right: 5px;
+}
+#center-block {
+   margin: 0px 5px;
+}
+#left-block {
+   margin-left: 5px;
+}
+div.yui3-g {
+     text-align:justify;
+}

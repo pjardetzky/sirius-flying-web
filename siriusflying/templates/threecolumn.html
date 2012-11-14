@@ -1,24 +1,16 @@
 {% extends "site.html" %}
 
 {% block content %}
-<div class="yui-gf">
-   <div class="yui-u first">
-       {% block colone %}{% endblock %}
-   </div>
-   <div class="yui-u">		
-      <div class="yui-ge">
-         <div class="yui-u first">
-            {% block coltwo %}{% endblock %}
-         </div>
-         <div class="yui-u">
-           {% block colthree %}{% endblock %}
-	    <div id="cbox" align="right">
-	      CALL (650) 320-8447<br>
-	      <span style="font-size:70%">OR E-MAIL <a class="sirius-links" href="mailto:john@siriusflying.com">John Pyle</a><br>
-	      FOR MORE INFORMATION<br></span>
-	    </div>
-         </div>
-      </div>
+<div class="yui3-g">
+   <div class="yui3-u-1-5">{% block colone %}{% endblock %}</div>
+   <div class="yui3-u-3-5">{% block coltwo %}{% endblock %}</div>
+   <div class="yui3-u-1-5">
+      {% block colthree %}{% endblock %}
+       <div id="cbox" align="right">
+	  CALL (650) 320-8447<br>
+          <span style="font-size:70%">OR E-MAIL <a class="sirius-links" href="mailto:john@siriusflying.com">John Pyle</a><br>
+	  FOR MORE INFORMATION<br></span>
+       </div>
    </div>
 </div>
 {% endblock %}

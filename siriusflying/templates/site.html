@@ -1,30 +1,34 @@
 {% extends "base.html" %}
 {% block title %}Sirius Flying LLC{% endblock %}
+
 {% block css %}
 <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
-<link rel="stylesheet" type="text/css" href="/build/menu/assets/skins/sam/menu.css">
-<link rel="stylesheet" type="text/css" href="/build/button/assets/skins/sam/button.css" />
-<link rel="stylesheet" type="text/css" href="/css/skin.css" />
 {% endblock %}
+
 {% block js %}
-<script type="text/javascript" src="/build/yahoo-dom-event/yahoo-dom-event.js"></script>
-<script type="text/javascript" src="/build/container/container_core-min.js"></script>
-<script type="text/javascript" src="/build/element/element-min.js"></script>
-<script type="text/javascript" src="/build/menu/menu-min.js"></script>
-<script type="text/javascript" src="/build/button/button-min.js"></script>
+<script type="text/javascript" src="/build/yui/yui-min.js"></script>
 <script type="text/javascript">
-  YAHOO.util.Event.onContentReady("menu", function () {
-
-  var menuBar = new YAHOO.widget.MenuBar("menu", { 
-                                         autosubmenudisplay: true, 
-                                         hidedelay: 750, 
-                                         lazyload: true });
-    menuBar.render()
-
-   });
+    YUI({
+        modules: {
+            "node-menunav-core-css": {
+                type: "css",
+                path: "node-menunav/assets/node-menunav-core.css"
+            },
+            "siriusnavskin": {
+                type: "css",
+                path: "assets/node-menunav/menu.css",
+                supersedes: ['skin-sam-node-menunav']
+            }
+        }
+    }).use('node-menunav', "node-menunav-core-css", "siriusnavskin", function(Y, result) {
+        var menu = Y.one("#menu");
+        menu.plug(Y.Plugin.NodeMenuNav, { autoSubmenuDisplay: false, mouseOutHideDelay: 0 });
+        menu.get("ownerDocument").get("documentElement").removeClass("yui3-loading");
+    });
 </script>
-
 {% endblock %}
+
+
 {% block header %}
 <table id="htable">
 <tr>
@@ -36,40 +40,19 @@
   </td>
 </tr>
 </table>
-<table id="mtable">
-<tr>
-  <td width="15%"></td>
-  <td width="85%">
-     <div id="menu" class="yuimenubar yuimenubarnav">
-     <div class="bd">
-       <ul class="first-of-type">
-            <li class="yuimenubaritem first-of-type">
-               <a class="yuimenubaritemlabel" href="/">Home</a>
-            </li>
-            <li class="yuimenubaritem">
-                <a class="yuimenubaritemlabel" href="/discovery">Discovery Flight</a>
-            </li>
-            <li class="yuimenubaritem">
-                <a class="yuimenubaritemlabel" href="/training">Flight Training</a>
-            </li>
-            <li class="yuimenubaritem">
-                <a class="yuimenubaritemlabel" href="/rental">Helicopter Rental</a>
-            </li>
-            <li class="yuimenubaritem">
-                <a class="yuimenubaritemlabel" href="/about">About Us</a>
-            </li>
-            <li class="yuimenubaritem">
-                <a class="yuimenubaritemlabel" href="/contact">Contact Us</a>
-            </li>
-            <li class="yuimenubaritem">
-                <a class="yuimenubaritemlabel" href="http://www.schedulepointe.com" target="_">Online Scheduling</a>
-            </li>
-       </ul>
-     </div>
-     </div>
-  </td>
-</tr>
-</table>
+
+<div id="menu" class="yui3-menu yui3-menu-horizontal">
+   <div class="yui3-menu-content">
+      <ul>
+         <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="/">Home</a></li>
+         <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="/discovery">Discovery Flight</a></li>
+         <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="/training">Flight Training</a></li>
+         <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="/rental">Helicopter Rental</a></li>
+         <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="/about">About Us</a></li>
+         <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="/contact">Contact Us</a></li>
+         <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="http://wwww.schedulepointe.com" target="_">Online Scheduling</a></li>
+      </ul>
+   </div>
 <br>
 {% endblock %}
 

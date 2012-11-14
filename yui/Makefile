@@ -4,14 +4,24 @@
 include ../includes.mk
 
 PACKAGE=yui
-ZIPFILE=${PACKAGE}_2.7.0b.zip
+ZIPFILE=${PACKAGE}_3.7.3.zip
 
-all:
+YUIDIR=../${APP_NAME}
+MENUDIR=${YUIDIR}/build/assets/node-menunav
+MENUCSS=menu.css
+
+all: lib menucss
+
+lib: 
 	@${UNZIP} ./${ZIPFILE}
-	@cat reset-fonts-grids.patch >> yui/build/reset-fonts-grids/reset-fonts-grids.css
-	@${CP} yui/build ../${APP_NAME}
+	@${CP} yui/build ${YUIDIR}
+
+menucss:
+	@mkdir -p ${MENUDIR}
+	@java -jar yuicompressor-2.4.8pre.jar ${MENUCSS} > ${MENUDIR}/${MENUCSS}
 
 clean:
+	@${RM} ${YUIDIR}/build
 	@${CleanRule}
 	@${RM} ${PACKAGE}
 
