@@ -1,7 +1,7 @@
 body {
     font-family:"Trebuchet MS",Arial,Sans-Serif;
     font-size:90%;
-    text-align:center;
+    line-height:1.3em;
     background:white;
     color:#553;
 }
@@ -82,26 +82,29 @@ a.sirius-links:hover {
    font-size:1.3em;
    color:#553;
    text-transform:uppercase;
+   align: right;
 }
 p {
    margin:0 0 .5em 0;
    line-height:1.3em;
    color:#553;
 }
-h2{
-   font-size:1.3em;
-   color:#553;
-   text-transform:uppercase;
-   padding:0 0 .7em .2em;
-}
-h1{
+h1 {
    font-size:1.2em;
    font-weight:normal;
    text-transform:uppercase;
    padding:.4em 0;  
-   background:#ffff;
+   background:#fff;
    color:#553;
    border-bottom:1px solid #D5C08B;
+   margin: 0;
+}
+h2 {
+   font-size:1.3em;
+   color:#553;
+   text-transform:uppercase;
+   padding:0 0 .7em .2em;
+   margin: 0;
 }
 pre{
    font-size:1.2em;

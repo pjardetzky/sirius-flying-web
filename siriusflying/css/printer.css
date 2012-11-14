@@ -1,3 +1,30 @@
+body {
+    font-family:"Trebuchet MS",Arial,Sans-Serif;
+    font-size:90%;
+    background:white;
+}
+#doc {
+    width: 1050px;
+    margin: 0 auto;
+    text-align: justify;
+    background: white;
+}
+#left {
+    width: 230px;
+}
+#center {
+    width: 590px;
+}
+#center-block {
+   margin: 0px 30px; 
+   padding: 0;
+}
+#right {
+    width: 230px;
+}
+#onecol {
+   margin: 0 125px;
+}
 #htable {
     background: #6E0000;
     width:100%;
@@ -15,11 +42,6 @@ div.title {
 #mtable {
 	display: none;
 }
-body {
-    font-family:"Trebuchet MS",Arial,Sans-Serif;
-    font-size:90%;
-    background:white;
-}
 
 #lbox {background-color:#fff; padding:0.5em;}
 #lbox ul {margin:0 3em; padding:0;}
@@ -35,16 +57,11 @@ body {
 #cbox {
    font-size:1.3em;
    text-transform:uppercase;
+   align: right;
 }
-
-p{
+p {
    margin:0 0 .5em 0;
    line-height:1.3em;
-}
-h2{
-   font-size:1.3em;
-   text-transform:uppercase;
-   padding:0 0 .7em .2em;
 }
 h1{
    font-size:1.2em;
@@ -53,10 +70,24 @@ h1{
    padding:.4em 0;
    background:#ffff;
    border-bottom:1px solid #D5C08B;
+   margin: 0;
+}
+h2{
+   font-size:1.3em;
+   text-transform:uppercase;
+   padding:0 0 .7em .2em;
+   margin: 0;
 }
 pre{
    font-size:1.2em;
    padding:1em;
+}
+table {
+   margin: 0;
+}
+td,th {
+   border: none;
+   padding: 0;
 }
 div.noprint {
    display: none;
