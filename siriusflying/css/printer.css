@@ -16,7 +16,7 @@ body {
     width: 590px;
 }
 #center-block {
-   margin: 0px 30px; 
+   margin: 0px 40px; 
    padding: 0;
 }
 #right {
@@ -56,8 +56,10 @@ div.title {
 
 #cbox {
    font-size:1.3em;
+   line-height:1.1em;
    text-transform:uppercase;
    align: right;
+   text-align: right;
 }
 p {
    margin:0 0 .5em 0;

@@ -18,7 +18,7 @@ body {
     width: 590px;
 }
 #center-block {
-   margin: 0px 30px; 
+   margin: 0px 40px; 
    padding: 0;
 }
 #right {
@@ -34,7 +34,7 @@ body {
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#990000, endColorstr=#6E0000)";
     color:#fff;
     width:100%;
-    height: 87px;
+    height: 85px;
     padding:0;
     text-align:left;
     border: none;
@@ -80,9 +80,11 @@ a.sirius-links:hover {
 
 #cbox {
    font-size:1.3em;
+   line-height:1.1em;
    color:#553;
    text-transform:uppercase;
    align: right;
+   text-align: right;
 }
 p {
    margin:0 0 .5em 0;

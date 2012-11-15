@@ -112,7 +112,8 @@
 .yui3-skin-sam .yui3-menu-horizontal .yui3-menu-label,
 .yui3-skin-sam .yui3-menu-horizontal .yui3-menuitem-content {
     padding: 6px 15px;
-    border: 1px solid #A0926B; 
+    border: 1px solid #A0926B;
+    border-right: 0;
     margin: -1px 0; 
     float: left; 	/*	Ensures that menu labels clear floated descendents. 
     				Also gets negative margins working in IE 7 
@@ -206,9 +207,13 @@
 .yui3-skin-sam .yui3-menu-horizontal .yui3-menu-label-active,
 .yui3-skin-sam .yui3-menu-horizontal .yui3-menuitem-active .yui3-menuitem-content,
 .yui3-skin-sam .yui3-menu-horizontal .yui3-menu-label-menuvisible {
-    background: #E3D6B7;
+    background: -moz-linear-gradient(top, #F5E7CD, #E0D3B3);
+    background: -webkit-gradient(linear, left top, left bottom, from(#F5E7CD), to(#E0D3B3));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#F5E7CD, endColorstr=#E0D3B3);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#F5E7CD, endColorstr=#E0D3B3)";
     color:#553;
     border: 1px solid #A0926B;
+    border-right: 0;
 }
 
 .yui3-skin-sam .yui3-menubuttonnav .yui3-menu-label-active,
