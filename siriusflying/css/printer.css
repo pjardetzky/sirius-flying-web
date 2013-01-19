@@ -42,6 +42,13 @@ div.title {
 .mtable {
 	display: none;
 }
+.hours {
+    border: 1px solid #A0926B; 
+}
+.hours td {
+    border: 1px solid #A0926B; 
+    padding: 5px;
+}
 
 #lbox {background-color:#fff; padding:0.5em;}
 #lbox ul {margin:0 3em; padding:0;}
