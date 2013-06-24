@@ -7,7 +7,7 @@ import os
 
 template_values = {
     'short_name': '',
-    'long_name': '',
+    'long_name': 'PYLE AVIATION, LLC.',
     }
 
 
