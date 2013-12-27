@@ -88,11 +88,18 @@ a.sirius-links:hover {
 #lbox ul li.sect { font-weight:bold; color:#f00; background:#fff; padding:2px 0; text-indent:2px; margin-top:2px;}
 #lbox ul li.first {margin-top:0;}
 
-#cbox {
+#callbox {
    font-size:1.3em;
    line-height:1.1em;
    color:#553;
    text-transform:uppercase;
+   align: right;
+   text-align: right;
+}
+#emailbox {
+   font-size:1.3em;
+   line-height:1.1em;
+   color:#553;
    align: right;
    text-align: right;
 }
