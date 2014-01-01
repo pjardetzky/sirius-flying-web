@@ -1,7 +1,7 @@
 application: siriusflying
-version: 2
-runtime: python27
-api_version: 1
+version: 3
+runtime: go
+api_version: go1
 threadsafe: true
 
 handlers:
@@ -15,4 +15,4 @@ handlers:
   static_dir: build
 
 - url: /.*
-  script: siriusflying.app
+  script: _go_app

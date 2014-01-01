@@ -1,17 +1,15 @@
-{% extends "site.html" %}
-
-{% block content %}
+{{ define "content" }}
 <div class="yui3-g">
    <div class="yui3-u" id="left">
-      {% block colone %}{% endblock %}
+      {{ template "colone" . }}
    </div>
    <div class="yui3-u" id="center">
       <div id="center-block">
-         {% block coltwo %}{% endblock %}
+         {{ template "coltwo" . }}
       </div>
    </div>
    <div class="yui3-u" id="right">
-      {% block colthree %}{% endblock %}
+      {{ template "colthree" . }}
        <div id="callbox">
 	     CALL (650) 320-8447
        </div>
@@ -27,5 +25,5 @@
        </div>
    </div>
 </div>
-{% endblock %}
+{{ end }}
 

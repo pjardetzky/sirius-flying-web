@@ -1,11 +1,10 @@
-{% extends "base.html" %}
-{% block title %}Sirius Flying{% endblock %}
+{{ define "title" }}Sirius Flying{{ end }}
 
-{% block css %}
+{{ define "css" }}
 <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
-{% endblock %}
+{{ end }}
 
-{% block js %}
+{{ define "js" }}
 <script type="text/javascript" src="/build/yui/yui-min.js"></script>
 <script type="text/javascript">
     YUI({
@@ -26,10 +25,10 @@
         menu.get("ownerDocument").get("documentElement").removeClass("yui3-loading");
     });
 </script>
-{% endblock %}
+{{ end }}
 
 
-{% block header %}
+{{ define "header" }}
 <table id="htable">
 <tr>
   <td width="5%"></td>
@@ -60,16 +59,16 @@
 </tr>
 </table>
 <br>
-{% endblock %}
+{{ end }}
 
-{% block footer %}
+{{ define "footer" }}
 <div class="noprint" id="ft" align="center">
 <br>
    <table border="0" cellpadding="0" cellspacing="0" width="100%">
    <tr>
     <td width="100%">
         <small>
-        &copy; {{long_name}} 2011, 2012, 2013. All rights reserved.&nbsp;
+        &copy; PYLE AVIATION, LLC. 2014. All rights reserved.&nbsp;
         <a class="sirius-links" href="/">Home</a>&nbsp;&nbsp;
         <a class="sirius-links" href="/discovery">Discovery Flight</a>&nbsp;&nbsp;
         <a class="sirius-links" href="/training">Flight Training</a>&nbsp;&nbsp;
@@ -82,5 +81,5 @@
    </tr>
    </table>
 </div>
-{% endblock %}
+{{ end }}
 

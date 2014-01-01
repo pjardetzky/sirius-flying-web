@@ -1,11 +1,10 @@
-{% extends "site.html" %}
 
-{% block content %}
+{{ define "content" }}
 <div class="yui3-g">
   <div class="yui3-u" id="onecol">
-    {% block colone %} {% endblock %}
+    {{ template "colone" . }} 
   </div>
 </div>
-{% endblock %}
+{{ end }}
 
 
