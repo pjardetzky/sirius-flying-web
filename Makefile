@@ -4,7 +4,7 @@
 include includes.mk
 
 TOPDIR = $(shell pwd)
-SUBDIRS = yui
+SUBDIRS = bootstrap
 
 all:
 	@echo "making $@ in ${TOPDIR} ..."
@@ -13,7 +13,6 @@ all:
 clean:
 	@echo "making $@ in ${TOPDIR} ..."
 	@${CleanRule}
-	@${RM} ${APP_NAME}/build
 	@${FIND} . -name *~ | xargs ${RM}
 	@${MakeSubdirs}
 

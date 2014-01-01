@@ -1,3 +1,4 @@
+
 {{ define "title" }}Sirius Flying{{ end }}
 
 {{ define "css" }}
@@ -5,59 +6,34 @@
 {{ end }}
 
 {{ define "js" }}
-<script type="text/javascript" src="/build/yui/yui-min.js"></script>
-<script type="text/javascript">
-    YUI({
-        modules: {
-            "node-menunav-core-css": {
-                type: "css",
-                path: "node-menunav/assets/node-menunav-core.css"
-            },
-            "siriusnavskin": {
-                type: "css",
-                path: "assets/node-menunav/menu.css",
-                supersedes: ['skin-sam-node-menunav']
-            }
-        }
-    }).use('node-menunav', "node-menunav-core-css", "siriusnavskin", function(Y, result) {
-        var menu = Y.one("#menu");
-        menu.plug(Y.Plugin.NodeMenuNav, { autoSubmenuDisplay: false, mouseOutHideDelay: 0 });
-        menu.get("ownerDocument").get("documentElement").removeClass("yui3-loading");
-    });
-</script>
+<script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
 {{ end }}
 
 
 {{ define "header" }}
-<table id="htable">
-<tr>
-  <td width="5%"></td>
-  <td width="90%">
-   <div class="title">
-       SIRIUS FLYING
-    </div>
-  </td>
-</tr>
-</table>
-<table class="mtable">
-<tr>
-  <td width="15%"></td>
-  <td width="85%">
-<div id="menu" class="yui3-menu yui3-menu-horizontal">
-   <div class="yui3-menu-content">
-      <ul>
-         <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="/">Home</a></li>
-         <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="/discovery">Discovery Flight</a></li>
-         <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="/training">Flight Training</a></li>
-         <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="/rental">Helicopter Rental</a></li>
-         <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="/about">About Us</a></li>
-         <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="/contact">Contact Us</a></li>
-         <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="http://www.schedulepointe.com" target="_">Online Scheduling</a></li>
-      </ul>
-   </div>
-  </td>
-</tr>
-</table>
+<div>
+  <table id="htable">
+    <tr>
+      <td width="5%"></td>
+      <td width="90%">
+        <div class="title">
+          SIRIUS FLYING
+        </div>
+      </td>
+    </tr>
+  </table>
+  <div class="noprint">
+    <ul class="nav nav-justified">
+      <li {{.Home}} ><a href="/">Home</a></li>
+      <li {{.Discovery}} ><a href="/discovery">Discovery Flight</a></li>
+      <li {{.Training}} ><a href="/training">Flight Training</a></li>
+      <li {{.Rental}} ><a href="/rental">Helicopter Rentals</a></li>
+      <li {{.About}} ><a href="/about">About Us</a></li>
+      <li {{.Contact}} ><a href="/contact">Contact Us</a></li>
+      <li><a href="http://www.schedulepointe.com" target="_">Online Scheduling</a></li>
+    </ul>
+  </div>
+</div>
 <br>
 {{ end }}
 

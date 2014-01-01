@@ -8,11 +8,14 @@ handlers:
 - url: /css
   static_dir: css
 
+- url: /fonts
+  static_dir: fonts
+
 - url: /img
   static_dir: img
 
-- url: /build
-  static_dir: build
+- url: /js
+  static_dir: js
 
 - url: /.*
   script: _go_app

@@ -3,10 +3,7 @@
 <head>
 <title>{{ template "title" . }}</title>
 
-<link rel="stylesheet" type="text/css" href="/build/cssreset/reset-min.css">
-<link rel="stylesheet" type="text/css" href="/build/cssfonts/fonts-min.css">
-<link rel="stylesheet" type="text/css" href="/build/cssgrids/grids-min.css">
-<link rel="stylesheet" type="text/css" href="/build/cssbase/cssbase-min.css" />
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="/css/browser.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="/css/printer.css" media="print"  />
 
@@ -27,14 +24,15 @@
 {{ template "css" . }}
 {{ template "js" . }}
 {{ template "extra" . }}
+
 </head>
 
-<body class="yui3-skin-sam">
-<div id="doc">
-  {{ template "header" .  }}
-  {{ template "content" . }}
-  {{ template "footer" . }}
-</div>
+<body>
+  <div class="container-fluid main">
+    {{ template "header" .  }}
+    {{ template "content" . }}
+    {{ template "footer" . }}
+  </div>
 </body>
 
 </html>
