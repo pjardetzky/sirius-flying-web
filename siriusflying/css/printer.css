@@ -1,5 +1,4 @@
 body {
-    font-family:"Trebuchet MS",Arial,Sans-Serif;
     font-size:90%;
     background:white;
 }
@@ -11,7 +10,7 @@ body {
 .onecol {
    margin: 0 125px;
 }
-#htable {
+.header {
     background: #6E0000;
     width:100%;
     height: 87px;
@@ -19,7 +18,7 @@ body {
     text-align:left;
 }
 div.title {
-    font-family:Times,Serif;
+    font-family:"Times New Roman",Serif;
     font-size:2.6em;
     letter-spacing:5px;
     text-decoration:none;	
