@@ -14,13 +14,16 @@ func init() {
 	http.HandleFunc("/contact", contact)
 }
 
-type Menu struct {
-	Home      template.HTMLAttr
-	Discovery template.HTMLAttr
-	Training  template.HTMLAttr
-	Rental    template.HTMLAttr
-	About     template.HTMLAttr
-	Contact   template.HTMLAttr
+func menuMap(active string) map[string]template.HTMLAttr {
+	menu := map[string]template.HTMLAttr{
+		"Home":      "",
+		"Discovery": "",
+		"Training":  "",
+		"Rental":    "",
+		"About":     "",
+		"Contact":   ""}
+	menu[active] = template.HTMLAttr("class='active'")
+	return menu
 }
 
 func index(w http.ResponseWriter, r *http.Request) {
@@ -30,12 +33,7 @@ func index(w http.ResponseWriter, r *http.Request) {
 		"templates/threecolumn.html",
 		"templates/index.html",
 	))
-	menu := Menu{Home:template.HTMLAttr("class='active'"),
-		Discovery:"",
-		Training:"",
-		Rental:"",	
-		About:"",
-		Contact:""}
+	menu := menuMap("Home")
 	err := t.Execute(w, menu)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -49,12 +47,7 @@ func discovery(w http.ResponseWriter, r *http.Request) {
 		"templates/threecolumn.html",
 		"templates/discovery.html",
 	))
-	menu := Menu{Home:"",
-		Discovery:template.HTMLAttr("class='active'"),
-		Training:"",
-		Rental:"",	
-		About:"",
-		Contact:""}
+	menu := menuMap("Discovery")
 	err := t.Execute(w, menu)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -68,12 +61,7 @@ func training(w http.ResponseWriter, r *http.Request) {
 		"templates/threecolumn.html",
 		"templates/training.html",
 	))
-	menu := Menu{Home:"",
-		Discovery:"",
-		Training:template.HTMLAttr("class='active'"),
-		Rental:"",	
-		About:"",
-		Contact:""}
+	menu := menuMap("Training")
 	err := t.Execute(w, menu)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -87,12 +75,7 @@ func rental(w http.ResponseWriter, r *http.Request) {
 		"templates/threecolumn.html",
 		"templates/rental.html",
 	))
-	menu := Menu{Home:"",
-		Discovery:"",
-		Training:"",
-		Rental:template.HTMLAttr("class='active'"),
-		About:"",
-		Contact:""}
+	menu := menuMap("Rental")
 	err := t.Execute(w, menu)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -106,12 +89,7 @@ func about(w http.ResponseWriter, r *http.Request) {
 		"templates/onecolumn.html",
 		"templates/about.html",
 	))
-	menu := Menu{Home:"",
-		Discovery:"",
-		Training:"",
-		Rental:"",	
-		About:template.HTMLAttr("class='active'"),
-		Contact:""}
+	menu := menuMap("About")
 	err := t.Execute(w, menu)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -125,12 +103,7 @@ func contact(w http.ResponseWriter, r *http.Request) {
 		"templates/threecolumn.html",
 		"templates/contact.html",
 	))
-	menu := Menu{Home:"",
-		Discovery:"",
-		Training:"",
-		Rental:"",	
-		About:"",
-		Contact:template.HTMLAttr("class='active'"),}
+	menu := menuMap("Contact")
 	err := t.Execute(w, menu)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
