@@ -1,5 +1,4 @@
 body {
-    font-family:"Trebuchet MS",Arial,Sans-Serif;
     line-height:1.3em;
     background:white;
     color:#553;
@@ -37,7 +36,7 @@ body {
     padding: 5px;
 }
 div.title {
-    font-family:Times,Serif;
+    font-family:"Times New Roman",Serif;
     font-size:2.1em;
     letter-spacing:5px;
     color:#fff;
