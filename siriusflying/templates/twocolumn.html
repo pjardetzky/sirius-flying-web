@@ -1,10 +1,8 @@
-{% extends "site.html" %}
-
-{% block content %}
-<div class="yui3-g">
-  <div class="yui3-u-1-5">{% block colone %} {% endblock %}</div>
-  <div class="yui3-u-4-5">{% block coltwo %} {% endblock %}</div>
+{{ define content }}
+<div class="row">
+  <div class="col-md-6">{{ template "colone" . }}</div>
+  <div class="col-md-6">{{ template "coltwo" . }}</div>
 </div>
-{% endblock %}
+{{ end }}
 
 

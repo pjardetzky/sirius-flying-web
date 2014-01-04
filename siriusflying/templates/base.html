@@ -1,12 +1,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en">
 <head>
-<title>{% block title %}{% endblock %}</title>
+<title>{{ template "title" . }}</title>
 
-<link rel="stylesheet" type="text/css" href="/build/cssreset/reset-min.css">
-<link rel="stylesheet" type="text/css" href="/build/cssfonts/fonts-min.css">
-<link rel="stylesheet" type="text/css" href="/build/cssgrids/grids-min.css">
-<link rel="stylesheet" type="text/css" href="/build/cssbase/cssbase-min.css" />
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="/css/browser.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="/css/printer.css" media="print"  />
 
@@ -24,18 +21,18 @@
 
 </script>
 
-{% block css   %}{% endblock %}
-{% block js    %}{% endblock %}
-{% block extra %}{% endblock %}
+{{ template "css" . }}
+{{ template "js" . }}
+{{ template "extra" . }}
+
 </head>
 
-<body class="yui3-skin-sam">
-<div id="doc">
-  {% block header  %}{% endblock %}
-  {% block content %}{% endblock %}  
-  {% block footer  %}{% endblock %}
-  {% block scripts %}{% endblock %}
-</div>
+<body>
+  <div class="container-fluid main">
+    {{ template "header" .  }}
+    {{ template "content" . }}
+    {{ template "footer" . }}
+  </div>
 </body>
 
 </html>

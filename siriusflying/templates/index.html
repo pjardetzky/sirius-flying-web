@@ -1,6 +1,5 @@
-{% extends "threecolumn.html" %}
 
-{% block extra %} 
+{{ define "extra" }} 
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
 <meta name="Language" content="English" /> 
@@ -8,17 +7,17 @@
 <meta name="description" content="Bay Area helicopter training and helicopter rental services. Please call 650-320-8447." /> 
 <meta name="keywords" content="Sirius Flying, Helicopter, Helicopter training, Helicopter rental, Bay Area, Silicon Valley, Palo Alto" />
 
-{% endblock %}
+{{ end }}
 
-{% block colone %}
-<a href="/"><img width="230" src="/img/animated-s.gif"></a>
+{{ define "colone" }}
+<a href="#"><img class="images" src="/img/animated-s.gif"></a>
 <br><br>
-<a href="/"><img width="230" src="/img/4EP.jpg"></a>
+<a href="#"><img class="images" src="/img/4EP.jpg"></a>
 <br><br>
-<a href="/"><img width="230" src="/img/54L-cockpit.jpg"></a>
-{% endblock %}
+<a href="#"><img class="images" src="/img/54L-cockpit.jpg"></a>
+{{ end }}
 
-{% block coltwo %}
+{{ define "coltwo" }}
 <h1>Sirius Flying</h1>
 <br>
 
@@ -59,4 +58,6 @@ exciting pilot training.  It is amazing and fun to fly here.
 Sirius flying offers flight training and rental <i>ONLY</i>.  We never cancel
 a training or rental flight to do commercial work.
 </p>
-{% endblock %}
+{{ end }}
+
+{{ define "colthree" }}{{ end }}

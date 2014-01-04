@@ -1,6 +1,6 @@
-{% extends "onecolumn.html" %}
+{{ define "extra" }} {{ end }}
 
-{% block colone %}
+{{ define "colone" }}
 <h1>Our Instructors</h1>
 <br>
 <p>
@@ -14,7 +14,7 @@ href="mailto:john@siriusflying.com">john@siriusflying.com</a> FOR MORE INFORMATI
       <table border="0" cellpadding="0" cellspacing="20" width="100%">
       <tr><td width="25%"></td><td width="75%"><h1>John Pyle, Owner</h1></td></tr>
       <tr valign=top>
-       <td width="25%"><a href="/about"><img name="john" width="168" src="/img/bio-john.jpg"></a></td>
+       <td width="25%"><a href="#"><img name="john" width="168" src="/img/bio-john.jpg"></a></td>
        <td width="75%" align="justify" >
 	 <br>
          <p>John began his flying career in 1967 flying
@@ -86,11 +86,11 @@ href="mailto:john@siriusflying.com">john@siriusflying.com</a> FOR MORE INFORMATI
       <table border="0" cellpadding="0" cellspacing="20" width="100%">
       <tr><td width="25%"></td><td width="75%"><h1>Simon Watsky, CFI</h1></td></tr>
       <tr valign=top>
-       <td width="25%"><a href="/about"><img name="simon" width="168" src="/img/bio-simon.jpg"></a></td>
+       <td width="25%"><a href="#"><img name="simon" width="168" src="/img/bio-simon.jpg"></a></td>
        <td width="75%" align="justify" >
   	 <br>
          <a class="sirius-links" href="mailto:simon@siriusflying.com">simon@siriusflying.com</a>
        </td>
       </tr>
     </table>
-{% endblock %}
+{{ end }}

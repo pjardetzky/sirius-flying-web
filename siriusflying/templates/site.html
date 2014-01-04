@@ -1,75 +1,51 @@
-{% extends "base.html" %}
-{% block title %}Sirius Flying{% endblock %}
 
-{% block css %}
+{{ define "title" }}Sirius Flying{{ end }}
+
+{{ define "css" }}
 <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
-{% endblock %}
+{{ end }}
 
-{% block js %}
-<script type="text/javascript" src="/build/yui/yui-min.js"></script>
-<script type="text/javascript">
-    YUI({
-        modules: {
-            "node-menunav-core-css": {
-                type: "css",
-                path: "node-menunav/assets/node-menunav-core.css"
-            },
-            "siriusnavskin": {
-                type: "css",
-                path: "assets/node-menunav/menu.css",
-                supersedes: ['skin-sam-node-menunav']
-            }
-        }
-    }).use('node-menunav', "node-menunav-core-css", "siriusnavskin", function(Y, result) {
-        var menu = Y.one("#menu");
-        menu.plug(Y.Plugin.NodeMenuNav, { autoSubmenuDisplay: false, mouseOutHideDelay: 0 });
-        menu.get("ownerDocument").get("documentElement").removeClass("yui3-loading");
-    });
-</script>
-{% endblock %}
+{{ define "js" }}
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+{{ end }}
 
 
-{% block header %}
-<table id="htable">
-<tr>
-  <td width="5%"></td>
-  <td width="90%">
-   <div class="title">
-       SIRIUS FLYING
-    </div>
-  </td>
-</tr>
-</table>
-<table class="mtable">
-<tr>
-  <td width="15%"></td>
-  <td width="85%">
-<div id="menu" class="yui3-menu yui3-menu-horizontal">
-   <div class="yui3-menu-content">
-      <ul>
-         <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="/">Home</a></li>
-         <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="/discovery">Discovery Flight</a></li>
-         <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="/training">Flight Training</a></li>
-         <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="/rental">Helicopter Rental</a></li>
-         <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="/about">About Us</a></li>
-         <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="/contact">Contact Us</a></li>
-         <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="http://www.schedulepointe.com" target="_">Online Scheduling</a></li>
-      </ul>
-   </div>
-  </td>
-</tr>
-</table>
+{{ define "header" }}
+<div>
+  <table class="header">
+    <tr>
+      <td width="5%"></td>
+      <td width="90%">
+        <div class="title">
+          SIRIUS FLYING
+        </div>
+      </td>
+    </tr>
+  </table>
+  <div class="noprint">
+    <ul class="nav nav-justified">
+      <li {{.Home}} ><a href="/">Home</a></li>
+      <li {{.Discovery}} ><a href="/discovery">Discovery Flight</a></li>
+      <li {{.Training}} ><a href="/training">Flight Training</a></li>
+      <li {{.Rental}} ><a href="/rental">Helicopter Rentals</a></li>
+      <li {{.About}} ><a href="/about">About Us</a></li>
+      <li {{.Contact}} ><a href="/contact">Contact Us</a></li>
+      <li><a href="http://www.schedulepointe.com" target="_">Online Scheduling</a></li>
+    </ul>
+  </div>
+</div>
 <br>
-{% endblock %}
+{{ end }}
 
-{% block footer %}
+{{ define "footer" }}
 <div class="noprint" id="ft" align="center">
 <br>
    <table border="0" cellpadding="0" cellspacing="0" width="100%">
    <tr>
     <td width="100%">
         <small>
-        &copy; {{long_name}} 2014. All rights reserved.&nbsp;
+        &copy; 2014 PYLE AVIATION, LLC. All rights reserved.&nbsp;
         <a class="sirius-links" href="/">Home</a>&nbsp;&nbsp;
         <a class="sirius-links" href="/discovery">Discovery Flight</a>&nbsp;&nbsp;
         <a class="sirius-links" href="/training">Flight Training</a>&nbsp;&nbsp;
@@ -82,5 +58,5 @@
    </tr>
    </table>
 </div>
-{% endblock %}
+{{ end }}
 
