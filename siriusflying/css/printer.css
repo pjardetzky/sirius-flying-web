@@ -78,6 +78,10 @@ td,th {
 div.noprint {
    display: none;
 }
+.images {
+    width: 100%;
+    height: auto;
+}
 @media print {
   a[href]:after {
     content: none !important;
