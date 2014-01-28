@@ -9,9 +9,6 @@ body {
     padding-left: 10px;
     padding-right: 10px;
 }
-.onecol {
-    margin: 0 125px;
-}
 .header {
     background-color: #990000; /* Old browsers */
     background-repeat: repeat-x; /* Repeat the gradient */
@@ -175,6 +172,10 @@ td,th {
       align: right;
       text-align: right;
   }
+  .cfi {
+      float: left;
+      width: 50%;
+  }
 }
 @media screen and (min-width: 1200px) {
   .main {
@@ -182,3 +183,27 @@ td,th {
       margin: auto;
   }
 }
+
+/* About page */
+.about_h {
+    padding: 0 10px 0 10px;
+}
+.cfi_row {
+    overflow: hidden;
+}
+
+.cfi {
+    list-style-position: inside;
+    padding: 0 10px 20px 10px;
+    vertical-align: top;
+    float: bottom;
+}
+
+.imgfloat {
+    float: left;
+    padding: 0 20px 20px 0;
+    width: 50%;
+}
+
+
+

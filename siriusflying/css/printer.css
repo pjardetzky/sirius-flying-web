@@ -7,9 +7,6 @@ body {
     padding-right: 10px;
     width: 1070px;
 }
-.onecol {
-   margin: 0 125px;
-}
 .header {
     width:100%;
     height: 87px;
@@ -86,3 +83,27 @@ div.noprint {
     content: none !important;
   }
 }
+
+.about_h {
+    padding: 0 10px 0 10px;
+}
+.cfi_row {
+    overflow: hidden;
+}
+.cfi {
+    list-style-position: inside;
+    padding: 0 10px 20px 10px;
+    vertical-align: top;
+    float: left;
+    width: 50%;
+}
+.imgfloat {
+    float: left;
+    padding: 0 20px 20px 0;
+    width: 50%;
+}
+
+
+
+
+
