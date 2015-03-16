@@ -4,7 +4,8 @@
 include ../includes.mk
 
 PACKAGE=bootstrap
-ZIPFILE=${PACKAGE}-3.0.3-dist.zip
+DIST=${PACKAGE}-3.3.2-dist
+ZIPFILE=${DIST}.zip
 
 APPDIR=../${APP_NAME}
 CSSDIR=${APPDIR}/css
@@ -20,13 +21,13 @@ install:
 	@mkdir -p ${JSDIR}
 	@mkdir -p ${CSSDIR}
 	@mkdir -p ${FONTDIR}
-	@${CP} dist/fonts/* ${FONTDIR}
-	@${CP} dist/css/*min.css ${CSSDIR}
-	@${CP} dist/js/*min.js ${JSDIR}
+	@${CP} ${DIST}/fonts/* ${FONTDIR}
+	@${CP} ${DIST}/css/*min.css ${CSSDIR}
+	@${CP} ${DIST}/js/*min.js ${JSDIR}
 
 clean:
 	@${CleanRule}
-	@${RM} dist
+	@${RM} ${DIST}
 	@${RM} ${FONTDIR}
 	@${RM} ${CSSDIR}/bootstrap*.css
 	@${RM} ${JSDIR}/bootstrap*.js
