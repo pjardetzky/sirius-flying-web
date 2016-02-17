@@ -26,14 +26,18 @@ func menuMap(active string) map[string]template.HTMLAttr {
 	return menu
 }
 
-func index(w http.ResponseWriter, r *http.Request) {
-	var t = template.Must(template.ParseFiles(
+func goTemplate(page, cols string) *template.Template {
+	return template.Must(template.ParseFiles(
 		"templates/base.html",
 		"templates/site.html",
-		"templates/threecolumn.html",
-		"templates/index.html",
+		"templates/"+cols+"column.html",
+		"templates/"+page+".html",
 	))
+}
+
+func index(w http.ResponseWriter, r *http.Request) {
 	menu := menuMap("Home")
+	t := goTemplate("index", "three")
 	err := t.Execute(w, menu)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -41,13 +45,8 @@ func index(w http.ResponseWriter, r *http.Request) {
 }
 
 func discovery(w http.ResponseWriter, r *http.Request) {
-	var t = template.Must(template.ParseFiles(
-		"templates/base.html",
-		"templates/site.html",
-		"templates/threecolumn.html",
-		"templates/discovery.html",
-	))
 	menu := menuMap("Discovery")
+	t := goTemplate("discovery", "three")
 	err := t.Execute(w, menu)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -55,13 +54,8 @@ func discovery(w http.ResponseWriter, r *http.Request) {
 }
 
 func training(w http.ResponseWriter, r *http.Request) {
-	var t = template.Must(template.ParseFiles(
-		"templates/base.html",
-		"templates/site.html",
-		"templates/threecolumn.html",
-		"templates/training.html",
-	))
 	menu := menuMap("Training")
+	t := goTemplate("training", "three")
 	err := t.Execute(w, menu)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -69,13 +63,8 @@ func training(w http.ResponseWriter, r *http.Request) {
 }
 
 func rental(w http.ResponseWriter, r *http.Request) {
-	var t = template.Must(template.ParseFiles(
-		"templates/base.html",
-		"templates/site.html",
-		"templates/threecolumn.html",
-		"templates/rental.html",
-	))
 	menu := menuMap("Rental")
+	t := goTemplate("rental", "three")
 	err := t.Execute(w, menu)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -83,13 +72,8 @@ func rental(w http.ResponseWriter, r *http.Request) {
 }
 
 func about(w http.ResponseWriter, r *http.Request) {
-	var t = template.Must(template.ParseFiles(
-		"templates/base.html",
-		"templates/site.html",
-		"templates/onecolumn.html",
-		"templates/about.html",
-	))
 	menu := menuMap("About")
+	t := goTemplate("about", "one")
 	err := t.Execute(w, menu)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -97,13 +81,8 @@ func about(w http.ResponseWriter, r *http.Request) {
 }
 
 func contact(w http.ResponseWriter, r *http.Request) {
-	var t = template.Must(template.ParseFiles(
-		"templates/base.html",
-		"templates/site.html",
-		"templates/threecolumn.html",
-		"templates/contact.html",
-	))
 	menu := menuMap("Contact")
+	t := goTemplate("contact", "three")
 	err := t.Execute(w, menu)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
