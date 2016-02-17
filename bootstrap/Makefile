@@ -4,7 +4,7 @@
 include ../includes.mk
 
 PACKAGE=bootstrap
-DIST=${PACKAGE}-3.3.2-dist
+DIST=${PACKAGE}-3.3.6-dist
 ZIPFILE=${DIST}.zip
 
 APPDIR=../${APP_NAME}
