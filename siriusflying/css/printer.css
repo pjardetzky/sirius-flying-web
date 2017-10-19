@@ -99,8 +99,8 @@ div.noprint {
 }
 .imgfloat {
     float: left;
-    padding: 0 30px 20px 0;
-    width: 60%;
+    padding: 0 20px 20px 0;
+    width: 50%;
 }
 .ppbottom {
     float: left;
@@ -110,7 +110,7 @@ div.noprint {
 
 .textfloat {
     float: right;
-    width: 40%;
+    width: 50%;
 }
 
 
