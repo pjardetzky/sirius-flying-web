@@ -10,18 +10,20 @@ func init() {
 	http.HandleFunc("/discovery", discovery)
 	http.HandleFunc("/training", training)
 	http.HandleFunc("/rental", rental)
+	http.HandleFunc("/commercial", commercial)
 	http.HandleFunc("/about", about)
 	http.HandleFunc("/contact", contact)
 }
 
 func menuMap(active string) map[string]template.HTMLAttr {
 	menu := map[string]template.HTMLAttr{
-		"Home":      "",
-		"Discovery": "",
-		"Training":  "",
-		"Rental":    "",
-		"About":     "",
-		"Contact":   ""}
+		"Home":       "",
+		"Discovery":  "",
+		"Training":   "",
+		"Rental":     "",
+		"Commercial": "",
+		"About":      "",
+		"Contact":    ""}
 	menu[active] = template.HTMLAttr("class='active'")
 	return menu
 }
@@ -65,6 +67,15 @@ func training(w http.ResponseWriter, r *http.Request) {
 func rental(w http.ResponseWriter, r *http.Request) {
 	menu := menuMap("Rental")
 	t := goTemplate("rental", "three")
+	err := t.Execute(w, menu)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+}
+
+func commercial(w http.ResponseWriter, r *http.Request) {
+	menu := menuMap("Commercial")
+	t := goTemplate("commercial", "three")
 	err := t.Execute(w, menu)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)

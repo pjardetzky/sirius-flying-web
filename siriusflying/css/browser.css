@@ -40,6 +40,10 @@ div.title {
     text-decoration:none;	
     text-align:left;
 }
+div.subtitle {
+    text-align:left;
+    padding-top: 5px;    
+}
 a.sirius-links {
     color: black;
     text-decoration:underline;
@@ -221,4 +225,8 @@ ul li{
     list-style-position: outside;;
     margin-left: -1.8em;
     padding: 0 0 0 -2px;
+}
+
+li.padded {
+    padding: 5px;
 }

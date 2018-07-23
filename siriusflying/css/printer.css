@@ -20,6 +20,9 @@ div.title {
     text-decoration:none;	
     text-align:center;
 }
+div.subtitle {
+    text-align:center;
+}
 .mtable {
 	display: none;
 }
@@ -118,4 +121,8 @@ ul li{
     list-style-position: outside;;
     margin-left: -1.8em;
     padding: 0 0 0 -2px;
+}
+
+li.padded {
+    padding: 5px;
 }
