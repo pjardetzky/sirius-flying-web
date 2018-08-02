@@ -7,7 +7,6 @@ import (
 
 func init() {
 	http.HandleFunc("/", index)
-	http.HandleFunc("/discovery", discovery)
 	http.HandleFunc("/training", training)
 	http.HandleFunc("/rental", rental)
 	http.HandleFunc("/commercial", commercial)
@@ -18,7 +17,6 @@ func init() {
 func menuMap(active string) map[string]template.HTMLAttr {
 	menu := map[string]template.HTMLAttr{
 		"Home":       "",
-		"Discovery":  "",
 		"Training":   "",
 		"Rental":     "",
 		"Commercial": "",
@@ -40,15 +38,6 @@ func goTemplate(page, cols string) *template.Template {
 func index(w http.ResponseWriter, r *http.Request) {
 	menu := menuMap("Home")
 	t := goTemplate("index", "three")
-	err := t.Execute(w, menu)
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-	}
-}
-
-func discovery(w http.ResponseWriter, r *http.Request) {
-	menu := menuMap("Discovery")
-	t := goTemplate("discovery", "three")
 	err := t.Execute(w, menu)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
